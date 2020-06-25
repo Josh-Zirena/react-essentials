@@ -1,3 +1,10 @@
+import React from 'react';
+import propTypes from 'prop-types';
+
+import { Book } from './Book';
+import { Hiring } from './Hiring';
+import { NotHiring } from './NotHiring';
+
 class Library extends React.Component {
 
     static defaultProps = {
@@ -78,3 +85,4 @@ class Library extends React.Component {
     freeBookMark: propTypes.bool,
   }
 
+export default Library;

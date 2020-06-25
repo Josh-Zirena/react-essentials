@@ -1,6 +1,7 @@
 import React, { } from 'react';
 import { render } from 'react-dom';
-import propTypes from 'prop-types';
+
+import Library from './Library';
 
 let bookList = [
   { title: "Hunger Games", author: "Suzzanne Collins", pages: 324, Illustrator: "Jamal Mashburn"},
