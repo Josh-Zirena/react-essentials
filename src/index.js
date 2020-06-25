@@ -1,38 +1,13 @@
 import React, { } from 'react';
 import { render } from 'react-dom';
+import propTypes from 'prop-types';
 
 let bookList = [
   { title: "Hunger Games", author: "Suzzanne Collins", pages: 324, Illustrator: "Jamal Mashburn"},
   { title: "The Sun Also Rises", author: "Ernest Hemingway", pages: 260},
   { title: "Cat's Cradle", author: "Kurt Vongnut", pages: 304 },
-  { title: "White Teeth", author: "Zadie Smith", pages: 479},
+  { title: "White Teeth"},
 ];
-
-const Book = ({title, author, pages, Illustrator}) => {
-  return (
-    <section>
-      <h2>{title}</h2>
-      <p>by: {author}</p>
-      <p>pages: {pages} pages </p>
-      <p> Illustration by: {Illustrator}</p>
-    </section>
-  )
-}
-
-const Library = ({books}) => {
-  return (
-    <div>
-      {books.map((book, i) => 
-        <Book 
-          key = {i}
-          title = {book.title} 
-          author = {book.author}
-          Illustrator = {book.Illustrator}
-          pages = {book.pages}
-        />)}
-    </div>
-  )
-}
 
 render(
   <Library books = {bookList}/>,
@@ -40,8 +15,34 @@ render(
 )
 
 
+// ======= 2ND PART =============
+// class FavoriteColorForm extends React.Component {
+//   state = { value: '' }
+
+//   newColor = e => this.setState({ value: e.target.value });
+//   submit = e =>  {
+//     console.log(`New color: ${this.state.value}`)
+//     e.preventDefault();
+//   }
+
+//   render() {
+//     return (
+//       <form onSubmit = {this.submit}>
+//         <label>
+//           Favorite Color: 
+//           <input 
+//             type = "color"
+//             onChange = {this.newColor}
+//           />
+//         </label>
+//         <button> Submit </button>
+//       </form>
+//     )
+//   }
+// }
 
 
+// ======FIRST PART=====
 // class SkiDayCounter extends Component {
 
   // getPercent = decimal => {
